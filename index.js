@@ -37,8 +37,13 @@ Query.toJSON()
       const radar = {
         title: "Valtech Frontend Tech Radar",
         blips,
-        quadrants: getUniqueProperties(blips, "quadrant"),
-        rings: getUniqueProperties(blips, "ring"),
+        quadrants: [
+          "Techniques",
+          "Tools",
+          "Languages and frameworks",
+          "Unsorted",
+        ],
+        rings: ["On hold", "Adopt", "Trial", "Asses"],
       };
       fs.writeFile("./radar.json", JSON.stringify(radar), (err) => {
         if (err) {

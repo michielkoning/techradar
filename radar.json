@@ -1,0 +1,147 @@
+{
+  "title": "Valtech Frontend Tech Radar",
+  "blips": [
+    {
+      "name": "Modernizr",
+      "description": "",
+      "ring": "On hold",
+      "quadrant": "Tools",
+      "isNew": false
+    },
+    {
+      "name": "Grunt",
+      "description": "",
+      "ring": "On hold",
+      "quadrant": "Tools",
+      "isNew": false
+    },
+    {
+      "name": "Webpack",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Tools",
+      "isNew": false
+    },
+    {
+      "name": "Stylelint",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Tools",
+      "isNew": false
+    },
+    {
+      "name": "Prettier",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Tools",
+      "isNew": false
+    },
+    {
+      "name": "PostCSS",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Tools",
+      "isNew": false
+    },
+    {
+      "name": "Storybook",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Tools",
+      "isNew": false
+    },
+    {
+      "name": "NativeScript",
+      "description": "",
+      "ring": "Trial",
+      "quadrant": "Tools",
+      "isNew": false
+    },
+    {
+      "name": "Gulp",
+      "description": "",
+      "ring": "On hold",
+      "quadrant": "Tools",
+      "isNew": false
+    },
+    {
+      "name": "GraphQL",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Tools",
+      "isNew": false
+    },
+    {
+      "name": "ESLint",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Tools",
+      "isNew": false
+    },
+    {
+      "name": "Babel",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Tools",
+      "isNew": false
+    },
+    {
+      "name": "Icon font",
+      "description": "",
+      "ring": "On hold",
+      "quadrant": "Techniques",
+      "isNew": false
+    },
+    {
+      "name": "Monorepo",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Techniques",
+      "isNew": false
+    },
+    {
+      "name": "SVG sprite icon",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Techniques",
+      "isNew": false
+    },
+    {
+      "name": "Progressive Web Apps",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Techniques",
+      "isNew": false
+    },
+    {
+      "name": "HTTP2",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Techniques",
+      "isNew": false
+    },
+    {
+      "name": "Design systems",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Techniques",
+      "isNew": false
+    },
+    {
+      "name": "Critical Path CSS",
+      "description": "",
+      "ring": "Adopt",
+      "quadrant": "Techniques",
+      "isNew": false
+    }
+  ],
+  "quadrants": [
+    "Tools",
+    "Techniques"
+  ],
+  "rings": [
+    "On hold",
+    "Adopt",
+    "Trial"
+  ]
+}
