@@ -18,7 +18,7 @@ const getUniqueProperties = (list, identifier) => {
     }, []);
 };
 
-const Query = Stack.ContentType("blips").Query();
+const Query = Stack.ContentType("blip").Query();
 Query.toJSON()
   .find()
   .then(
