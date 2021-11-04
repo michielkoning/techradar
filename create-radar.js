@@ -67,7 +67,7 @@ Query.toJSON()
 
       csvWriter
         .createObjectCsvWriter({
-          path: "./dist/radar.csv",
+          path: "./radar.csv",
           header,
         })
         .writeRecords(blips) // returns a promise
