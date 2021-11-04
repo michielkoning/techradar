@@ -1,92 +1,92 @@
 name,ring,quadrant,isNew,description
-SXA,On hold,Unsorted,FALSE,-
-Jamstack / Mach,Adopt,Unsorted,FALSE,-
-Debugbear,Adopt,Unsorted,FALSE,-
-css in js,Adopt,Unsorted,FALSE,-
-Figma,Trial,Unsorted,FALSE,-
-React/Vue testing library,Trial,Unsorted,FALSE,-
-Vite,Assess,Unsorted,FALSE,-
-Cloud functions,Assess,Unsorted,FALSE,-
-Serverless,Assess,Unsorted,FALSE,-
-styleguidist,Assess,Unsorted,FALSE,-
-webRTC,Trial,Unsorted,FALSE,-
-Semantic Releases,Trial,Unsorted,FALSE,-
-component libraries & styleguides,Adopt,Unsorted,FALSE,-
-Lottie,Adopt,Unsorted,FALSE,-
-Netlify /vercel / heroku,Assess,Unsorted,FALSE,-
-Gatsby,Assess,Unsorted,FALSE,-
-Svelte,Trial,Unsorted,FALSE,-
-Fractal.build,Trial,Unsorted,FALSE,-
-NEXT,Trial,Unsorted,FALSE,-
-NodeJS,Adopt,Unsorted,FALSE,-
-Apollo,Adopt,Unsorted,FALSE,-
-polyfill.io,Adopt,Unsorted,FALSE,-
-dependency drift fitness function ,Adopt,Unsorted,FALSE,-
-githooks,Adopt,Unsorted,FALSE,-
-Micro Frontends,Adopt,Unsorted,FALSE,-
-Application Insights,Trial,Unsorted,FALSE,-
-parcel,Assess,Unsorted,FALSE,-
-WebAssembly,Assess,Unsorted,FALSE,-
-CQRS,Trial,Unsorted,FALSE,-
-gRPC,Assess,Unsorted,FALSE,-
-D3js,Adopt,Unsorted,FALSE,-
-Lighthouse CLI,Adopt,Unsorted,FALSE,-
-Sonarqube,Adopt,Unsorted,FALSE,-
-CoreJS,Adopt,Unsorted,FALSE,-
-DayJS,Assess,Unsorted,FALSE,-
-next gen bundlers (snowpack),Assess,Unsorted,FALSE,-
-CI,Adopt,Unsorted,FALSE,-
-Zeplin,On hold,Unsorted,FALSE,-
-Mocha,On hold,Unsorted,FALSE,-
-yarn,Assess,Unsorted,FALSE,-
-npm,Adopt,Unsorted,FALSE,-
-React-native,Adopt,Unsorted,FALSE,-
-Conventional Commits,Trial,Unsorted,FALSE,-
-a11y,Adopt,Unsorted,FALSE,-
-Cypress,Adopt,Languages and frameworks,FALSE,-
-Underscore,On hold,Languages and frameworks,FALSE,-
-Suzy,On hold,Languages and frameworks,FALSE,-
-LESS,On hold,Languages and frameworks,FALSE,-
-jQuery,On hold,Languages and frameworks,FALSE,-
-AngularJs,On hold,Languages and frameworks,FALSE,-
-Zurb Foundation,On hold,Languages and frameworks,FALSE,-
-Web components,Trial,Languages and frameworks,FALSE,-
-Vue,Adopt,Languages and frameworks,FALSE,-
-TypeScript,Adopt,Languages and frameworks,FALSE,-
-Twitter Bootstrap,On hold,Languages and frameworks,FALSE,-
-Tailwind CSS,On hold,Languages and frameworks,FALSE,-
-SASS,Adopt,Languages and frameworks,FALSE,-
-React,Adopt,Languages and frameworks,FALSE,-
-Pug,On hold,Languages and frameworks,FALSE,-
-Moment.js,On hold,Languages and frameworks,FALSE,-
-Lodash,Adopt,Languages and frameworks,FALSE,-
-Knockout,On hold,Languages and frameworks,FALSE,-
-Jest,Adopt,Languages and frameworks,FALSE,-
-Handlebars,On hold,Languages and frameworks,FALSE,-
-Greensock,Trial,Languages and frameworks,FALSE,-
-ExpressJS,Trial,Languages and frameworks,FALSE,-
-Date-fns,Adopt,Languages and frameworks,FALSE,-
-Bulma.io,On hold,Languages and frameworks,FALSE,-
-Anime.js,Trial,Languages and frameworks,FALSE,-
-Yarn,Assess,Unsorted,FALSE,-
-Nuxt,Adopt,Unsorted,FALSE,-
-Angular,Trial,Languages and frameworks,FALSE,-
-Modernizr,On hold,Tools,FALSE,-
-Grunt,On hold,Tools,FALSE,-
-Webpack,Adopt,Tools,FALSE,-
-Stylelint,Adopt,Tools,FALSE,-
-Prettier,Adopt,Tools,FALSE,-
-PostCSS,Adopt,Tools,FALSE,-
-Storybook,Adopt,Tools,FALSE,-
-NativeScript,Trial,Tools,FALSE,-
-Gulp,On hold,Tools,FALSE,-
-GraphQL,Adopt,Tools,FALSE,-
-ESLint,Adopt,Tools,FALSE,-
-Babel,Adopt,Tools,FALSE,-
-Icon font,On hold,Techniques,FALSE,-
-Monorepo,Adopt,Techniques,FALSE,-
-SVG sprite icon,Adopt,Techniques,FALSE,-
-Progressive Web Apps,Adopt,Techniques,FALSE,-
-HTTP2,Adopt,Techniques,FALSE,-
-Design systems,Adopt,Techniques,FALSE,-
-Critical Path CSS,Adopt,Techniques,FALSE,-
+SXA,On hold,Unsorted,FALSE,test
+Jamstack / Mach,Adopt,Unsorted,FALSE,test
+Debugbear,Adopt,Unsorted,FALSE,test
+css in js,Adopt,Unsorted,FALSE,test
+Figma,Trial,Unsorted,FALSE,test
+React/Vue testing library,Trial,Unsorted,FALSE,test
+Vite,Assess,Unsorted,FALSE,test
+Cloud functions,Assess,Unsorted,FALSE,test
+Serverless,Assess,Unsorted,FALSE,test
+styleguidist,Assess,Unsorted,FALSE,test
+webRTC,Trial,Unsorted,FALSE,test
+Semantic Releases,Trial,Unsorted,FALSE,test
+component libraries & styleguides,Adopt,Unsorted,FALSE,test
+Lottie,Adopt,Unsorted,FALSE,test
+Netlify /vercel / heroku,Assess,Unsorted,FALSE,test
+Gatsby,Assess,Unsorted,FALSE,test
+Svelte,Trial,Unsorted,FALSE,test
+Fractal.build,Trial,Unsorted,FALSE,test
+NEXT,Trial,Unsorted,FALSE,test
+NodeJS,Adopt,Unsorted,FALSE,test
+Apollo,Adopt,Unsorted,FALSE,test
+polyfill.io,Adopt,Unsorted,FALSE,test
+dependency drift fitness function ,Adopt,Unsorted,FALSE,test
+githooks,Adopt,Unsorted,FALSE,test
+Micro Frontends,Adopt,Unsorted,FALSE,test
+Application Insights,Trial,Unsorted,FALSE,test
+parcel,Assess,Unsorted,FALSE,test
+WebAssembly,Assess,Unsorted,FALSE,test
+CQRS,Trial,Unsorted,FALSE,test
+gRPC,Assess,Unsorted,FALSE,test
+D3js,Adopt,Unsorted,FALSE,test
+Lighthouse CLI,Adopt,Unsorted,FALSE,test
+Sonarqube,Adopt,Unsorted,FALSE,test
+CoreJS,Adopt,Unsorted,FALSE,test
+DayJS,Assess,Unsorted,FALSE,test
+next gen bundlers (snowpack),Assess,Unsorted,FALSE,test
+CI,Adopt,Unsorted,FALSE,test
+Zeplin,On hold,Unsorted,FALSE,test
+Mocha,On hold,Unsorted,FALSE,test
+yarn,Assess,Unsorted,FALSE,test
+npm,Adopt,Unsorted,FALSE,test
+React-native,Adopt,Unsorted,FALSE,test
+Conventional Commits,Trial,Unsorted,FALSE,test
+a11y,Adopt,Unsorted,FALSE,test
+Cypress,Adopt,Languages and frameworks,FALSE,test
+Underscore,On hold,Languages and frameworks,FALSE,test
+Suzy,On hold,Languages and frameworks,FALSE,test
+LESS,On hold,Languages and frameworks,FALSE,test
+jQuery,On hold,Languages and frameworks,FALSE,test
+AngularJs,On hold,Languages and frameworks,FALSE,test
+Zurb Foundation,On hold,Languages and frameworks,FALSE,test
+Web components,Trial,Languages and frameworks,FALSE,test
+Vue,Adopt,Languages and frameworks,FALSE,test
+TypeScript,Adopt,Languages and frameworks,FALSE,test
+Twitter Bootstrap,On hold,Languages and frameworks,FALSE,test
+Tailwind CSS,On hold,Languages and frameworks,FALSE,test
+SASS,Adopt,Languages and frameworks,FALSE,test
+React,Adopt,Languages and frameworks,FALSE,test
+Pug,On hold,Languages and frameworks,FALSE,test
+Moment.js,On hold,Languages and frameworks,FALSE,test
+Lodash,Adopt,Languages and frameworks,FALSE,test
+Knockout,On hold,Languages and frameworks,FALSE,test
+Jest,Adopt,Languages and frameworks,FALSE,test
+Handlebars,On hold,Languages and frameworks,FALSE,test
+Greensock,Trial,Languages and frameworks,FALSE,test
+ExpressJS,Trial,Languages and frameworks,FALSE,test
+Date-fns,Adopt,Languages and frameworks,FALSE,test
+Bulma.io,On hold,Languages and frameworks,FALSE,test
+Anime.js,Trial,Languages and frameworks,FALSE,test
+Yarn,Assess,Unsorted,FALSE,test
+Nuxt,Adopt,Unsorted,FALSE,test
+Angular,Trial,Languages and frameworks,FALSE,test
+Modernizr,On hold,Tools,FALSE,test
+Grunt,On hold,Tools,FALSE,test
+Webpack,Adopt,Tools,FALSE,test
+Stylelint,Adopt,Tools,FALSE,test
+Prettier,Adopt,Tools,FALSE,test
+PostCSS,Adopt,Tools,FALSE,test
+Storybook,Adopt,Tools,FALSE,test
+NativeScript,Trial,Tools,FALSE,test
+Gulp,On hold,Tools,FALSE,test
+GraphQL,Adopt,Tools,FALSE,test
+ESLint,Adopt,Tools,FALSE,test
+Babel,Adopt,Tools,FALSE,test
+Icon font,On hold,Techniques,FALSE,test
+Monorepo,Adopt,Techniques,FALSE,test
+SVG sprite icon,Adopt,Techniques,FALSE,test
+Progressive Web Apps,Adopt,Techniques,FALSE,test
+HTTP2,Adopt,Techniques,FALSE,test
+Design systems,Adopt,Techniques,FALSE,test
+Critical Path CSS,Adopt,Techniques,FALSE,test

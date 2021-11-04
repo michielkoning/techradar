@@ -61,7 +61,7 @@ Query.toJSON()
           ring,
           quadrant,
           isNew: is_new ? "TRUE" : "FALSE",
-          description: description ? description : "-",
+          description: description ? description : "test",
         };
       });
 
