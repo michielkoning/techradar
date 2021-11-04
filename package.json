@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "node ./create-radar.js"
+    "build": "node ./create-radar.js && tech-radar-generator ./radar.json ./dist"
   },
   "author": "",
   "license": "ISC",
