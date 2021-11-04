@@ -58,10 +58,10 @@ Query.toJSON()
         const { title, description, ring, quadrant, is_new } = entry;
         return {
           name: title,
-          description,
           ring,
           quadrant,
-          isNew: is_new,
+          isNew: is_new ? "TRUE" : "FALSE",
+          description: description ? description : "-",
         };
       });
 
