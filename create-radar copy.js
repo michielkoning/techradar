@@ -1,8 +1,32 @@
 import contentstack from "contentstack";
 import fs from "fs";
 import dotenv from "dotenv";
+import csvWriter from "csv-writer";
 
 dotenv.config();
+
+const header = [
+  {
+    id: "name",
+    title: "name",
+  },
+  {
+    id: "ring",
+    title: "ring",
+  },
+  {
+    id: "quadrant",
+    title: "quadrant",
+  },
+  {
+    id: "isNew",
+    title: "isNew",
+  },
+  {
+    id: "description",
+    title: "description",
+  },
+];
 
 const Stack = contentstack.Stack(
   process.env.CONTENTSTACK_API_KEY,
@@ -18,6 +42,12 @@ const getUniqueProperties = (list, identifier) => {
     }, []);
 };
 
+var dir = "./dist";
+
+if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir);
+}
+
 const Query = Stack.ContentType("blip").Query();
 Query.toJSON()
   .find()
@@ -28,26 +58,22 @@ Query.toJSON()
         const { title, description, ring, quadrant, is_new } = entry;
         return {
           name: title,
-          // description,
-          description: "test",
           ring,
           quadrant,
-          isNew: is_new,
+          isNew: is_new ? "TRUE" : "FALSE",
+          description: description ? description : "test",
         };
       });
-      const radar = {
-        title: "Valtech Frontend Tech Radar",
-        blips,
-        quadrants: getUniqueProperties(blips, "quadrant"),
-        rings: getUniqueProperties(blips, "ring"),
-      };
-      fs.writeFile("./radar.json", JSON.stringify(radar), (err) => {
-        if (err) {
-          console.log("Error writing file", err);
-        } else {
-          console.log("Successfully wrote file");
-        }
-      });
+
+      csvWriter
+        .createObjectCsvWriter({
+          path: "./radar.csv",
+          header,
+        })
+        .writeRecords(blips) // returns a promise
+        .then(() => {
+          console.log("...Done");
+        });
     },
     function error(err) {
       // err object
