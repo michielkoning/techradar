@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "contentstack": "^3.14.0",
+    "csv-writer": "^1.6.0",
     "dotenv": "^10.0.0",
     "tech-radar-generator": "^0.5.2"
   }
