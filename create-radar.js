@@ -28,8 +28,7 @@ Query.toJSON()
         const { title, description, ring, quadrant, is_new } = entry;
         return {
           name: title,
-          // description,
-          description: "test",
+          description,
           ring,
           quadrant,
           isNew: is_new,
