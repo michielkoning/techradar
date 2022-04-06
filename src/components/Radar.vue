@@ -32,23 +32,29 @@
       </tbody>
     </table>
 
-    <div v-if="activeBlip" class="blip-details" id="blip-details">
-      {{ activeBlip.name }}
-      <dl>
-        <dt>Category</dt>
-        <dd>{{ activeBlip.category }}</dd>
-        <dt>Status</dt>
-        <dd>{{ activeBlip.status }}</dd>
-        <dt>Url</dt>
-        <dd>
-          <a :href="activeBlip.url" target="_blank" rel="noopener noreferrer">{{
-            activeBlip.url
-          }}</a>
-        </dd>
-      </dl>
-      {{ activeBlip.history }}
-      {{ comments }}
-    </div>
+    <dialog class="dialog" ref="dialog">
+      <button @click="closeDialog()">Close</button>
+      <div v-if="activeBlip" class="blip-details" id="blip-details">
+        <h1>{{ activeBlip.name }}</h1>
+        {{ activeBlip.description }}
+        <dl>
+          <dt>Category</dt>
+          <dd>{{ activeBlip.category }}</dd>
+          <dt>Status</dt>
+          <dd>{{ activeBlip.status }}</dd>
+          <dt>Url</dt>
+          <dd>
+            <a
+              :href="activeBlip.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ activeBlip.url }}</a
+            >
+          </dd>
+        </dl>
+        {{ activeBlip.history }}
+      </div>
+    </dialog>
   </div>
 </template>
 
@@ -60,6 +66,7 @@ import radar from "@/data/radar";
 const statuses = ref<string[]>(["Assess", "Trial", "Adopt", "On hold"]);
 
 const activeBlip = ref<Blip | null>(null);
+const dialog = ref<HTMLDialogElement>();
 
 function filteredBlibs(category: string, status: string) {
   return (radar.blips as Blip[])
@@ -72,12 +79,21 @@ function getStatusClassName(status: string) {
 }
 
 function toggleActiveBlip(blip: Blip) {
-  console.log(activeBlip.value);
   if (activeBlip.value && activeBlip.value.name === blip.name) {
-    activeBlip.value = null;
+    closeDialog();
   } else {
     activeBlip.value = blip;
+    openDialog();
   }
+}
+
+function openDialog() {
+  dialog.value.showModal();
+}
+
+function closeDialog() {
+  dialog.value.close();
+  activeBlip.value = null;
 }
 </script>
 
@@ -99,6 +115,20 @@ td {
 
 .status-header {
   background: #ccc;
+}
+
+.dialog {
+  border-radius: 4px;
+  border: 0;
+  width: 65ch;
+  max-width: calc(100% - 30px);
+  max-height: calc(100vh - 30px);
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.3);
+  padding: 1rem;
+}
+.dialog::backdrop {
+  background: rgb(0 0 0 / 0.4);
+  padding: 1rem;
 }
 
 .status {
