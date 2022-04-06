@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <Radar msg="Welcome to Your Vue.js + TypeScript App" />
+    <Radar />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Radar from "@/components/Radar.vue"; // @ is an alias to /src
+import Radar from "@/components/Radar.vue";
 
 export default defineComponent({
   name: "Home",
