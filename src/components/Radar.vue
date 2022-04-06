@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="category in categories" :key="category">
+        <tr v-for="category in radar.categories" :key="category">
           <th>{{ category }}</th>
           <td
             v-for="status in statuses"
@@ -18,14 +18,15 @@
             :class="getStatusClassName(status)"
             :key="`${category}_${status}`"
           >
-            <span
+            <button
               v-for="blip in filteredBlibs(category, status)"
               :key="blip.name"
               class="blip"
-              @click="setActiveBlip(blip)"
+              @click="toggleActiveBlip(blip)"
             >
               {{ blip.name }}
-            </span>
+              <sup v-if="blip.isNew">new</sup>
+            </button>
           </td>
         </tr>
       </tbody>
@@ -33,8 +34,20 @@
 
     <div v-if="activeBlip" class="blip-details" id="blip-details">
       {{ activeBlip.name }}
-      <dl>category: {{ activeBlip.category }}</dl>
-      <dl>status: {{ activeBlip.status }}</dl>
+      <dl>
+        <dt>Category</dt>
+        <dd>{{ activeBlip.category }}</dd>
+        <dt>Status</dt>
+        <dd>{{ activeBlip.status }}</dd>
+        <dt>Url</dt>
+        <dd>
+          <a :href="activeBlip.url" target="_blank" rel="noopener noreferrer">{{
+            activeBlip.url
+          }}</a>
+        </dd>
+      </dl>
+      {{ activeBlip.history }}
+      {{ comments }}
     </div>
   </div>
 </template>
@@ -45,12 +58,6 @@ import { Blip } from "@/types";
 import radar from "@/data/radar";
 
 const statuses = ref<string[]>(["Assess", "Trial", "Adopt", "On hold"]);
-const categories = ref<string[]>([
-  "Languages and frameworks",
-  "Tools",
-  "Techniques",
-  "Unsorted",
-]);
 
 const activeBlip = ref<Blip | null>(null);
 
@@ -64,8 +71,13 @@ function getStatusClassName(status: string) {
   return `status--${status.split(" ").join("-").toLowerCase()}`;
 }
 
-function setActiveBlip(blip: Blip) {
-  activeBlip.value = blip;
+function toggleActiveBlip(blip: Blip) {
+  console.log(activeBlip.value);
+  if (activeBlip.value && activeBlip.value.name === blip.name) {
+    activeBlip.value = null;
+  } else {
+    activeBlip.value = blip;
+  }
 }
 </script>
 
@@ -120,6 +132,8 @@ td {
   border-radius: 0.5em;
   background: var(--blip-bg-color);
   color: var(--blip-color);
+  border: 0;
+  cursor: pointer;
 }
 
 h3 {
