@@ -15,7 +15,8 @@ const getUniqueProperties = (list, identifier) => {
     .map((listItem) => listItem[identifier])
     .reduce((unique, item) => {
       return unique.includes(item) ? unique : [...unique, item];
-    }, []);
+    }, [])
+    .sort();
 };
 
 const Query = Stack.ContentType("blip").Query();
@@ -25,20 +26,32 @@ Query.toJSON()
     function success(result) {
       const entries = result[0];
       const blips = entries.map((entry) => {
-        const { title, description, ring, quadrant, is_new } = entry;
+        const {
+          title,
+          description,
+          ring,
+          quadrant,
+          url,
+          is_new,
+          history,
+          comments,
+        } = entry;
         return {
           name: title,
           description,
+          url,
           status: ring,
           category: quadrant,
           isNew: is_new,
+          history,
+          comments,
         };
       });
       const radar = {
         title: "Valtech Frontend Tech Radar",
         blips,
-        categories: getUniqueProperties(blips, "quadrant"),
-        statuses: getUniqueProperties(blips, "ring"),
+        categories: getUniqueProperties(blips, "category"),
+        statuses: getUniqueProperties(blips, "status"),
       };
       fs.writeFile("./src/data/radar.json", JSON.stringify(radar), (err) => {
         if (err) {
