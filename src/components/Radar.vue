@@ -34,26 +34,7 @@
 
     <dialog class="dialog" ref="dialog">
       <button @click="closeDialog()">Close</button>
-      <div v-if="activeBlip" class="blip-details" id="blip-details">
-        <h1>{{ activeBlip.name }}</h1>
-        {{ activeBlip.description }}
-        <dl>
-          <dt>Category</dt>
-          <dd>{{ activeBlip.category }}</dd>
-          <dt>Status</dt>
-          <dd>{{ activeBlip.status }}</dd>
-          <dt>Url</dt>
-          <dd>
-            <a
-              :href="activeBlip.url"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ activeBlip.url }}</a
-            >
-          </dd>
-        </dl>
-        {{ activeBlip.history }}
-      </div>
+      <BlipContent v-if="activeBlip" :blip="activeBlip" />
     </dialog>
   </div>
 </template>
@@ -62,6 +43,8 @@
 import { ref } from "vue";
 import { Blip } from "@/types";
 import radar from "@/data/radar";
+import BlipContent from "@/components/BlipContent";
+import Dialog from "@/components/Dialog";
 
 const statuses = ref<string[]>(["Assess", "Trial", "Adopt", "On hold"]);
 
@@ -117,20 +100,6 @@ td {
   background: #ccc;
 }
 
-.dialog {
-  border-radius: 4px;
-  border: 0;
-  width: 65ch;
-  max-width: calc(100% - 30px);
-  max-height: calc(100vh - 30px);
-  box-shadow: 0 0 10px rgb(0 0 0 / 0.3);
-  padding: 1rem;
-}
-.dialog::backdrop {
-  background: rgb(0 0 0 / 0.4);
-  padding: 1rem;
-}
-
 .status {
   background-color: #eee;
 }
@@ -166,18 +135,18 @@ td {
   cursor: pointer;
 }
 
-h3 {
-  margin: 40px 0 0;
+.dialog {
+  border-radius: 4px;
+  border: 0;
+  width: 65ch;
+  max-width: calc(100% - 30px);
+  max-height: calc(100vh - 30px);
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.3);
+  padding: 1rem;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.dialog::backdrop {
+  background: rgb(0 0 0 / 0.5);
+  padding: 1rem;
+  backdrop-filter: blur(2px);
 }
 </style>
