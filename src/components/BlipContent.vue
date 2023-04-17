@@ -29,12 +29,11 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
-import { Blip } from "@/types";
+import type { Blip } from '@/types'
 
 const props = defineProps<{
-  blip: Blip;
-}>();
+  blip: Blip
+}>()
 </script>
 
 <style scoped>

@@ -1,15 +1,9 @@
 <template>
-  <Nav />
-  <router-view />
+  <Radar />
 </template>
-<script lang="ts">
-import { defineComponent } from "vue";
-import Nav from "@/components/Nav.vue";
-export default defineComponent({
-  components: {
-    Nav,
-  },
-});
+
+<script lang="ts" setup>
+import Radar from '@/components/Radar.vue'
 </script>
 
 <style>

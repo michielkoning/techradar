@@ -40,43 +40,48 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
-import { Blip } from "@/types";
-import radar from "@/data/radar";
-import BlipContent from "@/components/BlipContent";
-import Dialog from "@/components/Dialog";
+import { ref, type Ref } from 'vue'
+import type { Blip } from '@/types'
+import radar from '@/data/radar'
+import BlipContent from '@/components/BlipContent.vue'
 
-const statuses = ref<string[]>(["Assess", "Trial", "Adopt", "On hold"]);
+const statuses = ref<string[]>(['Assess', 'Trial', 'Adopt', 'On hold'])
 
-const activeBlip = ref<Blip | null>(null);
-const dialog = ref<HTMLDialogElement>();
+const activeBlip = ref<Blip | null>(null)
+const dialog: Ref<HTMLDialogElement | null> = ref(null)
 
-function filteredBlibs(category: string, status: string) {
+const filteredBlibs = (category: string, status: string) => {
   return (radar.blips as Blip[])
     .filter((item) => item.category === category && item.status === status)
-    .sort((a, b) => a.name.localeCompare(b.name));
+    .sort((a, b) => a.name.localeCompare(b.name))
 }
 
-function getStatusClassName(status: string) {
-  return `status--${status.split(" ").join("-").toLowerCase()}`;
+const getStatusClassName = (status: string) => {
+  return `status--${status.split(' ').join('-').toLowerCase()}`
 }
 
-function toggleActiveBlip(blip: Blip) {
+const toggleActiveBlip = (blip: Blip) => {
   if (activeBlip.value && activeBlip.value.name === blip.name) {
-    closeDialog();
+    closeDialog()
   } else {
-    activeBlip.value = blip;
-    openDialog();
+    activeBlip.value = blip
+    openDialog()
   }
 }
 
-function openDialog() {
-  dialog.value.showModal();
+const openDialog = () => {
+  if (!dialog.value) {
+    return
+  }
+  dialog.value.showModal()
 }
 
-function closeDialog() {
-  dialog.value.close();
-  activeBlip.value = null;
+const closeDialog = () => {
+  if (!dialog.value) {
+    return
+  }
+  dialog.value.close()
+  activeBlip.value = null
 }
 </script>
 
