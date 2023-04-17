@@ -42,6 +42,7 @@
 <script lang="ts" setup>
 import { ref, type Ref } from 'vue'
 import type { Blip } from '@/types'
+// @ts-ignore
 import radar from '@/data/radar'
 import BlipContent from '@/components/BlipContent.vue'
 

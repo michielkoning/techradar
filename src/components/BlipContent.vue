@@ -21,10 +21,7 @@
       <h2>Comments</h2>
       {{ props.blip.comments }}
     </div>
-    <div class="history" v-if="props.blip.history.length">
-      <h2>History</h2>
-      <p>TODO: Add history...</p>
-    </div>
+
   </div>
 </template>
 
